@@ -1,0 +1,15 @@
+workflows:
+  ios-app:
+    name: Build GPS SwiftUI App
+    environment:
+      ios_signing:
+        distribution_type: development
+      xcode: latest
+    scripts:
+      - name: Install dependencies
+        script: echo "No dependencies to install."
+      - name: Build app
+        script: |
+          xcodebuild -scheme GpsSwiftApp -sdk iphoneos -configuration Release build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+    artifacts:
+      - build/Release-iphoneos/*.app

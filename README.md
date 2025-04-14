@@ -1,1 +1,3 @@
-# gps-swift-app
+# GpsSwiftApp
+
+App GPS avec SwiftUI et carte satellite via SwiftPM.
